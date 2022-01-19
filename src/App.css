@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+#root{
+    min-height: 60vh;
+}
+html{
+    min-height: 60vh;
+}
+
+body{
+    min-height: 60vh;
+
+}
+
+.MuiContainer-root{
+    margin-top: 1em;
+    min-height: 60vh;
+}
+.MuiPaper-root{
+    padding: 1em;
+        min-height: 60vh;
+
+}
+
+.bar{
+    background-color: blue;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: 1px;
+    margin-right:1px
+}
+
+.active{
+    background-color: blueviolet;
+}
+
+
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexItem{
+    flex-grow: 1;
+}
+
+.flexItem2{
+        flex-grow: 2;
+    margin-left: 1em;
+    margin-right:2em
+}
+
+.topBar{
+    /* border-style: solid; */
+    padding: 1em;
+    border-bottom: 5px solid black;
+}
