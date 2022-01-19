@@ -207,59 +207,67 @@ function App() {
 	}
 
 	return (
-		<Container>
-			<Paper>
-				<h1 style={{ textAlign: "center", alignSelf: "center" }}>Bubble Sort Visualizer</h1>
-				<div className="flexContainer topBar">
-					<div
-						className="flexItem"
-						style={{
-							minWidth: "10vw",
-							width: "10vw",
-							maxWidth: "10vw",
-							textAlign: "center",
-							alignSelf: "center",
-						}}
-					>
-						{returnButton()}
+		<>
+			<Container>
+				<Paper>
+					<h1 style={{ textAlign: "center", alignSelf: "center" }}>Bubble Sort Visualizer</h1>
+					<div className="flexContainer topBar">
+						<div
+							className="flexItem"
+							style={{
+								minWidth: "10vw",
+								width: "10vw",
+								maxWidth: "10vw",
+								textAlign: "center",
+								alignSelf: "center",
+							}}
+						>
+							{returnButton()}
+						</div>
+						<div className="flexItem2">
+							<Typography id="input-slider" gutterBottom>
+								Array size
+							</Typography>
+							<Slider
+								defaultValue={50}
+								step={null}
+								marks={sizeMarks}
+								min={10}
+								max={100}
+								value={arrayLength}
+								onChange={onArraySizeSliderChange}
+								disabled={sorting}
+							/>
+						</div>
+						<div className="flexItem2">
+							<Typography id="input-slider" gutterBottom>
+								Sorting speed
+							</Typography>
+							<Slider
+								onChange={onSortingSpeedSliderChange}
+								value={sortingSpeed}
+								min={0}
+								max={200}
+								step={null}
+								defaultValue={100}
+								marks={speedMarks}
+								disabled={sorting}
+							/>
+						</div>
 					</div>
-					<div className="flexItem2">
-						<Typography id="input-slider" gutterBottom>
-							Array size
-						</Typography>
-						<Slider
-							defaultValue={50}
-							step={null}
-							marks={sizeMarks}
-							min={10}
-							max={100}
-							value={arrayLength}
-							onChange={onArraySizeSliderChange}
-							disabled={sorting}
-						/>
+					<div style={{ minHeight: "60vh" }} className="flexContainer">
+						{returnNumberArray()}
 					</div>
-					<div className="flexItem2">
-						<Typography id="input-slider" gutterBottom>
-							Sorting speed
-						</Typography>
-						<Slider
-							onChange={onSortingSpeedSliderChange}
-							value={sortingSpeed}
-							min={0}
-							max={200}
-							step={null}
-							defaultValue={100}
-							marks={speedMarks}
-							disabled={sorting}
-						/>
-					</div>
-				</div>
-				<div style={{ minHeight: "60vh" }} className="flexContainer">
-					{returnNumberArray()}
-				</div>
-				<div style={{ paddingTop: "1em" }}></div>
-			</Paper>
-		</Container>
+					<div style={{ paddingTop: "1em" }}></div>
+				</Paper>
+			</Container>
+			<div className="footer">
+				View source code{" "}
+				<a href="https://github.com/Alwindh/bubble-sort" rel="noreferrer" target="_blank">
+					on github
+				</a>
+			</div>
+		</>
 	);
 }
 
