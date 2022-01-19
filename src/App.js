@@ -209,8 +209,18 @@ function App() {
 	return (
 		<Container>
 			<Paper>
+				<h1 style={{ textAlign: "center", alignSelf: "center" }}>Bubble Sort Visualizer</h1>
 				<div className="flexContainer topBar">
-					<div className="flexItem" style={{ textAlign: "center", alignSelf: "center" }}>
+					<div
+						className="flexItem"
+						style={{
+							minWidth: "10vw",
+							width: "10vw",
+							maxWidth: "10vw",
+							textAlign: "center",
+							alignSelf: "center",
+						}}
+					>
 						{returnButton()}
 					</div>
 					<div className="flexItem2">
